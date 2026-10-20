@@ -6,9 +6,15 @@ new Chart(ctx4, {
     labels: ['Q1', 'Q2', 'Q3', 'Q4'],
     datasets: [{
       label: 'Total Cost',
-      data: [2.1, 2.3, 2.2, 2.4], // replace with your actual values
+      data: [2.1, 2.3, 2.2, 2.4], // replace with your actual quarterly values
       backgroundColor: '#e74c3c'
     }]
+  },
+  options: {
+    responsive: true,
+    plugins: {
+      legend: { display: false }
+    }
   }
 });
 
@@ -21,17 +27,25 @@ new Chart(ctx5, {
     datasets: [
       {
         label: 'Total Cost',
-        data: [1.8, 1.5, 1.3, 1.2, 1.0], // replace with actual branch costs
+        data: [1.8, 1.5, 1.3, 1.2, 1.0], // replace with branch cost data
         borderColor: '#e74c3c',
+        tension: 0.3,
         fill: false
       },
       {
         label: 'Net Sales',
-        data: [2.5, 2.0, 1.8, 1.5, 1.2], // replace with actual branch sales
+        data: [2.5, 2.0, 1.8, 1.5, 1.2], // replace with branch sales data
         borderColor: '#27ae60',
+        tension: 0.3,
         fill: false
       }
     ]
+  },
+  options: {
+    responsive: true,
+    plugins: {
+      legend: { position: 'bottom' }
+    }
   }
 });
 
@@ -42,8 +56,14 @@ new Chart(ctx6, {
   data: {
     labels: ['Rice & Grains', 'Beverages', 'Dairy', 'Snacks'],
     datasets: [{
-      data: [3.0, 2.0, 2.5, 1.5], // replace with actual category costs
+      data: [3.0, 2.0, 2.5, 1.5], // replace with category cost data
       backgroundColor: ['#f39c12', '#2980b9', '#27ae60', '#8e44ad']
     }]
+  },
+  options: {
+    responsive: true,
+    plugins: {
+      legend: { position: 'right' }
+    }
   }
 });
