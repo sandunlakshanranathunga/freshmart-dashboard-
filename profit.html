@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Fresh Mart - Profit Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="fade-in">
+    <h1>Fresh Mart Profit Dashboard</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="sales.html">Sales Analysis</a></li>
+        <li><a href="profit.html" class="active">Profit Analysis</a></li>
+        <li><a href="cost.html">Cost Analysis</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- KPI Cards -->
+    <section class="metrics slide-up">
+      <div class="card">Total Profit: <strong>2M</strong></div>
+      <div class="card">Top Category: <strong>Dairy</strong></div>
+      <div class="card">Highest Branch: <strong>Colombo 07</strong></div>
+    </section>
+
+    <!-- Charts Section -->
+    <section class="charts fade-in">
+      <div class="chart">
+        <h3>Profit by Category</h3>
+        <canvas id="profitByCategory"></canvas>
+      </div>
+
+      <div class="chart">
+        <h3>Profit by Branch</h3>
+        <canvas id="profitByBranch"></canvas>
+      </div>
+
+      <div class="chart">
+        <h3>Sales vs Profit by Product</h3>
+        <canvas id="salesVsProfitProducts"></canvas>
+      </div>
+    </section>
+  </main>
+
+  <!-- Chart.js library -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <!-- Dedicated JS file for profit dashboard -->
+  <script src="profit.js"></script>
+</body>
+</html>
