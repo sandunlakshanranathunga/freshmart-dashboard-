@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Fresh Mart - Sales Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="fade-in">
+    <h1>Fresh Mart Sales Dashboard</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="sales.html" class="active">Sales Analysis</a></li>
+        <li><a href="profit.html">Profit Analysis</a></li>
+        <li><a href="cost.html">Cost Analysis</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- KPI Cards -->
+    <section class="metrics slide-up">
+      <div class="card">Total Sales: <strong>11M</strong></div>
+      <div class="card">Total Orders: <strong>34,760</strong></div>
+      <div class="card">Visitors: <strong>14,987</strong></div>
+      <div class="card">Products Sold: <strong>12,987</strong></div>
+    </section>
+
+    <!-- Charts Section -->
+    <section class="charts fade-in">
+      <div class="chart">
+        <h3>Net Sales by Month</h3>
+        <canvas id="salesByMonth"></canvas>
+      </div>
+
+      <div class="chart">
+        <h3>Sales by Branch</h3>
+        <canvas id="salesByBranch"></canvas>
+      </div>
+
+      <div class="chart">
+        <h3>Sales vs Profit by Product</h3>
+        <canvas id="salesVsProfit"></canvas>
+      </div>
+    </section>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
