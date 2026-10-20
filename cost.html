@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Fresh Mart - Cost Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="fade-in">
+    <h1>Fresh Mart Cost Dashboard</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="sales.html">Sales Analysis</a></li>
+        <li><a href="profit.html">Profit Analysis</a></li>
+        <li><a href="cost.html" class="active">Cost Analysis</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- KPI Cards -->
+    <section class="metrics slide-up">
+      <div class="card">Total Cost: <strong>9M</strong></div>
+      <div class="card">Delivery Days: <strong>1,245</strong></div>
+      <div class="card">Quantity Purchased: <strong>45,000</strong></div>
+    </section>
+
+    <!-- Charts Section -->
+    <section class="charts fade-in">
+      <div class="chart">
+        <h3>Total Cost by Quarter</h3>
+        <canvas id="costByQuarter"></canvas>
+      </div>
+
+      <div class="chart">
+        <h3>Cost vs Sales by Branch</h3>
+        <canvas id="costVsSales"></canvas>
+      </div>
+
+      <div class="chart">
+        <h3>Cost Breakdown by Category</h3>
+        <canvas id="costByCategory"></canvas>
+      </div>
+    </section>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
